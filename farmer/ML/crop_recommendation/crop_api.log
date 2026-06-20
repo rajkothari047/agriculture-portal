@@ -1,0 +1,5 @@
+2026-04-10 14:02:43,674 - INFO - Model loaded successfully
+2026-04-10 14:02:43,679 - INFO - Available crops: ['apple', 'banana', 'blackgram', 'chickpea', 'coconut', 'coffee', 'cotton', 'grapes', 'jute', 'kidneybeans', 'lentil', 'maize', 'mango', 'mothbeans', 'mungbean', 'muskmelon', 'orange', 'papaya', 'pigeonpeas', 'pomegranate', 'rice', 'watermelon']
+2026-04-10 14:02:43,690 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-10 14:02:43,690 - INFO - [33mPress CTRL+C to quit[0m

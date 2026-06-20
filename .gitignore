@@ -1,0 +1,10 @@
+﻿.venv/
+__pycache__/
+node_modules/
+uploads/
+.env
+
+farmer/ML/DiseaseDetection/dataset/
+farmer/ML/yield_prediction/yield_model.pkl
+farmer/ML/yield_prediction/yield_model_compressed.pkl
+*.zip
