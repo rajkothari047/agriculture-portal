@@ -6208,16 +6208,7 @@ ALTER TABLE `state`
 ALTER TABLE `farmer_crops_trade`
   ADD CONSTRAINT `farmer_crops_trade_ibfk_1` FOREIGN KEY (`farmer_fkid`) REFERENCES `farmerlogin` (`farmer_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-DELIMITER $$
---
--- Events
---
-CREATE DEFINER=`root`@`localhost` EVENT `auto_cleanup_history` ON SCHEDULE EVERY 1 DAY STARTS '2026-04-11 19:37:34' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-  DELETE FROM price_history 
-  WHERE price_date < DATE_SUB(CURDATE(), INTERVAL 7 DAY);
-END$$
 
-DELIMITER ;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

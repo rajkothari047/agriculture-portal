@@ -1,19 +1,29 @@
 <?php
-// mysqli_connect() function opens a new connection to the MySQL server.
-$conn = mysqli_connect("localhost", "root", "", "agriculture_portal");
+include '../sql.php';
 
-// Check if session is already started before starting it
+// Start Session
 if (session_status() === PHP_SESSION_NONE) {
-    session_start(); // Starting Session
+    session_start();
 }
 
-// Storing Session
+// Check Login Session
+if (!isset($_SESSION['farmer_login_user'])) {
+    header("Location: login.php");
+    exit();
+}
+
 $user_check = $_SESSION['farmer_login_user'];
 
-// SQL Query To Fetch Complete Information Of User
-$query = "SELECT farmer_name from farmerlogin where email = '$user_check'";
+// Fetch Farmer Details
+$query = "SELECT farmer_name FROM farmerlogin WHERE email = '$user_check'";
 $ses_sql = mysqli_query($conn, $query);
-$row = mysqli_fetch_assoc($ses_sql);
-$login_session = $row['farmer_name'];
+
+if ($ses_sql && mysqli_num_rows($ses_sql) > 0) {
+    $row = mysqli_fetch_assoc($ses_sql);
+    $login_session = $row['farmer_name'];
+} else {
+    $login_session = "";
+}
+
 $CustID = $user_check;
 ?>
