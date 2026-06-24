@@ -5,8 +5,14 @@ uploads/
 .env
 
 assets/uploads/
+
 farmer/ML/DiseaseDetection/dataset/
+farmer/ML/DiseaseDetection/models/
+
 farmer/ML/yield_prediction/yield_model.pkl
 farmer/ML/yield_prediction/yield_model_compressed.pkl
+farmer/ML/yield_prediction/encoder_compressed.pkl
+
 farmer/static/citylist.json
+
 *.zip
